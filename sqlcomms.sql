@@ -13,3 +13,11 @@ CREATE TABLE items(
 -- @block
 INSERT INTO items (name, description, imageLink, price, reviewScore, reviewcount, amountInStock) VALUES
 ('fly swatter', 'a fly swatter to swat flies', 'https://danishagroshoppen.dk/Admin/Public/GetImage.ashx?width=400&height=400&crop=0&Compression=75&DoNotUpscale=true&image=/Files/Images/Ecom/Products/932701010-fluesm%C3%A6kker%20plast.jpg', 12.99, 4.6, 519, 5)
+
+
+-- @block
+CREATE TABLE users(
+id INT PRIMARY KEY IDENTITY(1,1),
+username VARCHAR(255) NOT NULL UNIQUE,
+password VARCHAR(255) NOT NULL
+)

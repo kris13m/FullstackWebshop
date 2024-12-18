@@ -1,13 +1,19 @@
-import Item from './components/item.tsx';
+import React, { useState, useEffect } from 'react';
+import Header from  './components/Header.tsx';
+import ItemsHolder from './components/ItemsHolder.tsx';
 
-function App() {
+function App()
+{
+  const [loggedIn, setLoggedIn] = useState(false);
+ 
 
   return(
-  <>
-    <Item></Item>
-    <Item></Item>
+    <>
+  
+    <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn}></Header>
+    <ItemsHolder loggedIn={loggedIn}></ItemsHolder>
+   
     </>
-  );
-
+  )
 }
 export default App

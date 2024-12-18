@@ -1,15 +1,20 @@
 
-function Item(){
+
+
+
+function Item({ data }: { data: any }){
+
     return(
-        <>
-        <h1 id = "itemn-name">Item name</h1>
-        <p id = "item-description">Item description</p>
-        <img id = "item-image"></img>
-        <p id = "item-price">Item price</p>
-        <p id = "item-reviewscore">Item review score</p>
-        <p id = "item-reviewcount">Item review count</p>
-        <p id = "item-amountinstock">Item amount in stock</p>
-        </>
+        <div className = "item">
+        <h1>{data.title}</h1>
+        <p>{data.description}</p>
+        <img src = {data.imgLink} height="200px" alt = "item image missing :("></img>
+        <p >price: {data.price ? data.price : "log in to see prices! :D"},-</p>
+        <p>review score: {data.rating}</p>
+        <p>reviews: {data.amountOfRating}</p>
+        <p>quantity: {data.quantity}</p>
+        <p>category: {data.category}</p>
+        </div>
         
     );
 }

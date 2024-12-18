@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Item from './item.tsx';
+import Item from './Item.tsx';
 
 function ItemsHolder({loggedIn}: any)
 {

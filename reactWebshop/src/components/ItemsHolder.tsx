@@ -25,6 +25,7 @@ function ItemsHolder({loggedIn}: any)
         setLoading(false); 
       })
       .catch((err) => {
+        console.log(err)
         setError('data fetching failed');
         setLoading(false); 
       });

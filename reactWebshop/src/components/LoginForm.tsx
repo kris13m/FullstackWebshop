@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef} from "react";
 import axios from "axios";
 
 function LoginForm({loggedIn, SetLoggedIn}: any){
@@ -61,6 +61,7 @@ function LoginForm({loggedIn, SetLoggedIn}: any){
             axios.post('https://api-kris13m-webshop-project.onrender.com/api/users/createuser', {username: username, passcode: passcode})
             .then((response) => {
                 console.log("created user");
+                console.log(response);
                 attemptLogin(event);
                
               })
